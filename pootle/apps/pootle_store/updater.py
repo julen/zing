@@ -132,6 +132,14 @@ class UnitUpdater(object):
         return self.newunit and not self.conflict_found
 
     @property
+    def should_resurrect(self):
+        return (
+            self.unit.isobsolete()
+            and not self.newunit.isobsolete()
+            and self.unit.revision > self.update.store_revision
+        )
+
+    @property
     def target_updated(self):
         return self.unit.target != self.original.target
 
@@ -170,7 +178,9 @@ class UnitUpdater(object):
     def update_unit(self):
         suggested = False
         updated = False
-        if self.should_update_target:
+        if self.should_resurrect:
+            updated = self.unit.resurrect(is_fuzzy=self.unit.isfuzzy())
+        elif self.should_update_target:
             updated = self.unit.update(
                 self.newunit, user=self.update.user)
         if self.should_update_index:

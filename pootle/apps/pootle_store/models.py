@@ -868,8 +868,13 @@ class Unit(models.Model, base.TranslationUnit):
             self.index = 0
 
     def resurrect(self, is_fuzzy=False):
+        """Bring a unit's state back to life.
+
+        :param is_fuzzy: whether the unit is in fuzzy state or not.
+        :return: `True` if the state was adjusted, false otherwise.
+        """
         if self.state > OBSOLETE:
-            return
+            return False
 
         if filter(None, self.target_f.strings):
             # when Unit toggles its OBSOLETE state the number of translated
@@ -885,6 +890,7 @@ class Unit(models.Model, base.TranslationUnit):
         self.update_qualitychecks(keep_false_positives=True)
         self._state_updated = True
         self._save_action = UNIT_RESURRECTED
+        return True
 
     def istranslated(self):
         if self._target_updated and not self.isfuzzy():
