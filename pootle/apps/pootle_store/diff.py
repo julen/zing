@@ -208,10 +208,10 @@ class StoreDiff(object):
         new_units = [u for u in self.updated_target_units
                      if u not in self.source_units]
 
-        # These unit are either present in both or only in the file so are
-        # kept in the file order
-        new_units += [u for u in self.source_units.keys()
-                      if u not in self.obsoleted_target_units]
+        # TODO: add an explanation on order
+        # These are units from the file
+        # This also considers units that might have been obsoleted
+        new_units += self.source_units.keys()
 
         return new_units
 
