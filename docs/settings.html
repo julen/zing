@@ -1,0 +1,324 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Settings · Zing</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Settings · Zing"/><meta property="og:type" content="website"/><meta property="og:url" content="https://evernote.github.io/zing//zing/index.html"/><meta property="og:description" content="- [`POOTLE_INSTANCE_ID`](#pootle-instance-id)"/><link rel="shortcut icon" href="/zing/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/zing/css/main.css"/></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/zing/"><img class="logo" src="/zing/img/logo.svg"/><h2 class="headerTitle">Zing</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li><a href="/zing/docs/introduction.html" target="_self">Docs</a></li><li><a href="/zing/en/faq.html" target="_self">FAQ</a></li><li><a href="https://github.com/evernote/zing/" target="_blank">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Reference</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Get Started</h3><ul><li class="navListItem"><a class="navItem" href="/zing/docs/introduction.html">Introduction</a></li><li class="navListItem"><a class="navItem" href="/zing/docs/installation.html">Installation</a></li><li class="navListItem"><a class="navItem" href="/zing/docs/initial-setup.html">Initial Setup</a></li></ul></div><div class="navGroup navGroupActive"><h3>Workflow</h3><ul><li class="navListItem"><a class="navItem" href="/zing/docs/project-setup.html">Project Setup</a></li></ul></div><div class="navGroup navGroupActive"><h3>Reference</h3><ul><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/zing/docs/settings.html">Settings</a></li><li class="navListItem"><a class="navItem" href="/zing/docs/commands.html">Commands</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/evernote/zing/edit/master/docs/ref-settings.md" target="_blank">Edit</a><h1>Settings</h1></header><article><div><span><ul>
+<li><a href="#pootle-instance-id"><code>POOTLE_INSTANCE_ID</code></a></li>
+<li><a href="#pootle-title"><code>POOTLE_TITLE</code></a></li>
+<li><a href="#pootle-cache-timeout"><code>POOTLE_CACHE_TIMEOUT</code></a></li>
+<li><a href="#pootle-log-directory"><code>POOTLE_LOG_DIRECTORY</code></a></li>
+<li><a href="#pootle-contact-enabled"><code>POOTLE_CONTACT_ENABLED</code></a></li>
+<li><a href="#pootle-contact-email"><code>POOTLE_CONTACT_EMAIL</code></a></li>
+<li><a href="#pootle-contact-report-email"><code>POOTLE_CONTACT_REPORT_EMAIL</code></a></li>
+<li><a href="#pootle-signup-enabled"><code>POOTLE_SIGNUP_ENABLED</code></a></li>
+<li><a href="#pootle-custom-template-context"><code>POOTLE_CUSTOM_TEMPLATE_CONTEXT</code></a></li>
+<li><a href="#pootle-legalpage-nocheck-prefixes"><code>POOTLE_LEGALPAGE_NOCHECK_PREFIXES</code></a></li>
+<li><a href="#pootle-meta-users"><code>POOTLE_META_USERS</code></a></li>
+<li><a href="#pootle-captcha-enabled"><code>POOTLE_CAPTCHA_ENABLED</code></a></li>
+<li><a href="#pootle-reports-mark-func"><code>POOTLE_REPORTS_MARK_FUNC</code></a></li>
+<li><a href="#zing-invoices-phantomjs-bin"><code>ZING_INVOICES_PHANTOMJS_BIN</code></a></li>
+<li><a href="#zing-invoices-directory"><code>ZING_INVOICES_DIRECTORY</code></a></li>
+<li><a href="#zing-invoices-company"><code>ZING_INVOICES_COMPANY</code></a></li>
+<li><a href="#zing-invoices-department"><code>ZING_INVOICES_DEPARTMENT</code></a></li>
+<li><a href="#zing-invoices-recipients"><code>ZING_INVOICES_RECIPIENTS</code></a></li>
+<li><a href="#pootle-score-coefficients"><code>POOTLE_SCORE_COEFFICIENTS</code></a></li>
+<li><a href="#pootle-sync-file-mode"><code>POOTLE_SYNC_FILE_MODE</code></a></li>
+<li><a href="#pootle-tm-server"><code>POOTLE_TM_SERVER</code></a></li>
+<li><a href="#pootle-mt-backends"><code>POOTLE_MT_BACKENDS</code></a></li>
+<li><a href="#parse-pool-cull-frequency"><code>PARSE_POOL_CULL_FREQUENCY</code></a></li>
+<li><a href="#parse-pool-size"><code>PARSE_POOL_SIZE</code></a></li>
+<li><a href="#pootle-translation-directory"><code>POOTLE_TRANSLATION_DIRECTORY</code></a></li>
+<li><a href="#pootle-quality-checker"><code>POOTLE_QUALITY_CHECKER</code></a></li>
+<li><a href="#pootle-wordcount-func"><code>POOTLE_WORDCOUNT_FUNC</code></a></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" name="pootle-instance-id"></a><a href="#pootle-instance-id" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_INSTANCE_ID</code></h3>
+<p>Instance ID. This is to differentiate multiple instances of the same app (e.g.
+development, staging and production).  By default this value is exposed as a
+global <code>&lt;html&gt;</code> class name to allow overriding CSS rules based on the instance
+type.</p>
+<h3><a class="anchor" aria-hidden="true" name="pootle-title"></a><a href="#pootle-title" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_TITLE</code></h3>
+<p>Default: <em>'Zing Translation Server'</em></p>
+<p>The name of the Zing server.</p>
+<h3><a class="anchor" aria-hidden="true" name="pootle-cache-timeout"></a><a href="#pootle-cache-timeout" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_CACHE_TIMEOUT</code></h3>
+<p>Default: <em>604800</em> (a week)</p>
+<p>Time in seconds to keep certain objects cached in memory (template fragments,
+language and project lists, permissions, etc.).</p>
+<p>Note that for anonymous users Pootle also uses :ref:<code>Django's caching middleware &lt;django:the-per-site-cache&gt;</code>, and its settings can be configured
+separately.</p>
+<h3><a class="anchor" aria-hidden="true" name="pootle-log-directory"></a><a href="#pootle-log-directory" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_LOG_DIRECTORY</code></h3>
+<p>Default: <code>working_path('log')</code></p>
+<p>The directory where Pootle writes event logs to. These are high-level
+logs of events on store/unit changes and manage.py commands executed</p>
+<h3><a class="anchor" aria-hidden="true" name="pootle-contact-enabled"></a><a href="#pootle-contact-enabled" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_CONTACT_ENABLED</code></h3>
+<p>Default: <code>True</code></p>
+<p>Controls whether users will be able to use the contact form. The address to
+receive messages is controlled by <code>POOTLE_CONTACT_EMAIL</code>.</p>
+<h3><a class="anchor" aria-hidden="true" name="pootle-contact-email"></a><a href="#pootle-contact-email" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_CONTACT_EMAIL</code></h3>
+<p>Default: <code>info@YOUR_DOMAIN.com</code></p>
+<p>Address to receive messages sent through the contact form. This will only
+have effect if <code>POOTLE_CONTACT_ENABLED</code> is set to <code>True</code>.</p>
+<h3><a class="anchor" aria-hidden="true" name="pootle-contact-report-email"></a><a href="#pootle-contact-report-email" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_CONTACT_REPORT_EMAIL</code></h3>
+<p>Default: <code>POOTLE_CONTACT_EMAIL</code></p>
+<p>Email address to report errors on strings.</p>
+<h3><a class="anchor" aria-hidden="true" name="pootle-signup-enabled"></a><a href="#pootle-signup-enabled" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_SIGNUP_ENABLED</code></h3>
+<p>Default: <code>True</code></p>
+<p>Controls whether user sign ups are allowed or not. If set to <code>False</code>,
+administrators will still be able to create new user accounts.</p>
+<h3><a class="anchor" aria-hidden="true" name="pootle-custom-template-context"></a><a href="#pootle-custom-template-context" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_CUSTOM_TEMPLATE_CONTEXT</code></h3>
+<p>Default: <code>{}</code></p>
+<p>Custom template context dictionary. The values will be available in the
+templates as <code>{{ custom.&lt;key&gt; }}</code>.</p>
+<h3><a class="anchor" aria-hidden="true" name="pootle-legalpage-nocheck-prefixes"></a><a href="#pootle-legalpage-nocheck-prefixes" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_LEGALPAGE_NOCHECK_PREFIXES</code></h3>
+<p>Default: <code>('/about', '/accounts', '/admin', '/contact', '/jsi18n', '/pages', )</code></p>
+<p>List of path prefixes where the <code>LegalAgreementMiddleware</code> will check
+if the current logged-in user has agreed all the legal documents defined
+for the Pootle instance. Don't change this unless you know what you're
+doing.</p>
+<h3><a class="anchor" aria-hidden="true" name="pootle-meta-users"></a><a href="#pootle-meta-users" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_META_USERS</code></h3>
+<p>Default: <code>()</code></p>
+<p>Additional meta, or non-human, accounts. Zing already manages the 'system'
+and 'nobody' users who own system updates to translations and submissions by
+anonymous users.  These meta accounts have their own simple public profiles
+and won't track scores.</p>
+<h3><a class="anchor" aria-hidden="true" name="pootle-captcha-enabled"></a><a href="#pootle-captcha-enabled" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_CAPTCHA_ENABLED</code></h3>
+<p>Default: <code>True</code></p>
+<p>Enable spam prevention through a captcha.</p>
+<h3><a class="anchor" aria-hidden="true" name="pootle-reports-mark-func"></a><a href="#pootle-reports-mark-func" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_REPORTS_MARK_FUNC</code></h3>
+<p>Default: <code>''</code> (empty string)</p>
+<p>The graph of a user's activity, within reports, can be
+<a href="https://code.google.com/archive/p/flot-marks/">marked</a> to indicate events by
+using this function. The setting must contain an import path to such a marking
+function (string).</p>
+<p>The function receives the user and graph ranges and returns an array of
+applicable marks.</p>
+<p>Parameters:</p>
+<ul>
+<li><code>username</code> - user for whom we're producing this graph</li>
+<li><code>start</code> (datetime) - start date of the graph</li>
+<li><code>end</code> (datetime) - end date of the graph</li>
+</ul>
+<p>The function must return an <em>array of dictionaries</em> (marks), where every mark
+has the following properties:</p>
+<ul>
+<li><code>position</code>, specifying the point in the x-axis where the mark should
+be set (UNIX timestamp multiplied by 1000), and</li>
+<li><code>label</code> specifying the text that will be displayed next to the mark.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" name="zing-invoices-phantomjs-bin"></a><a href="#zing-invoices-phantomjs-bin" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>ZING_INVOICES_PHANTOMJS_BIN</code></h3>
+<p>Default: <code>None</code> (unset)</p>
+<p>Absolute path to the <a href="http://phantomjs.org/">PhantomJS binary</a>. This is
+needed in order to optionally generate PDF invoices out of user activity.</p>
+<h3><a class="anchor" aria-hidden="true" name="zing-invoices-directory"></a><a href="#zing-invoices-directory" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>ZING_INVOICES_DIRECTORY</code></h3>
+<p>Default: <code>working_path('invoices')</code></p>
+<p>Base directory where the invoices will be created. Invoices will be generated
+in subdirectories for each year and month combination, i.e. <code>$ZING_INVOICES_DIRECTORY/&lt;YYYY-MM&gt;/</code>.</p>
+<h3><a class="anchor" aria-hidden="true" name="zing-invoices-company"></a><a href="#zing-invoices-company" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>ZING_INVOICES_COMPANY</code></h3>
+<p>Default: <em>'ACME'</em></p>
+<p>Name of your company as displayed in the invoice. Check the templates at
+<em>templates/invoices/</em> for further details and customizations.</p>
+<h3><a class="anchor" aria-hidden="true" name="zing-invoices-department"></a><a href="#zing-invoices-department" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>ZING_INVOICES_DEPARTMENT</code></h3>
+<p>Default: <em>'ACME Department'</em></p>
+<p>Name of your company deparment as displayed in the invoices. Check the templates
+at <em>templates/invoices/</em> for further details and customizations.</p>
+<h3><a class="anchor" aria-hidden="true" name="zing-invoices-recipients"></a><a href="#zing-invoices-recipients" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>ZING_INVOICES_RECIPIENTS</code></h3>
+<p>Default: <code>{}</code> (empty dictionary)</p>
+<p>The list of usernames for whom invoices will be generated and send to.</p>
+<p>The setting holds a dictionary where the keys are actual usernames of the
+running Pootle instance and the values are dictionaries of key-value pairs
+which will hold the user-specific configuration used to construct individual
+invoices.</p>
+<p>The user configuration accepts the following keys:</p>
+<p><code>name</code> (required)
+Full name as displayed in the invoice. The official &quot;full&quot; person name can
+be different from the public <em>shortened</em> version available in the Pootle
+profile, hence this name is used instead as it's dealing with financial
+documents.</p>
+<p><code>wire_info</code> (required)
+Wire information which includes payment details. This can be a multi-line
+string and it will be rendered as such in the invoice, with leading
+whitespace removed.</p>
+<p><code>paid_by</code> (required)
+Official name of the company/person paying the invoice.</p>
+<p><code>invoice_prefix</code>
+Prefix used to generate invoice IDs. This will be prepended to the current
+month in <code>YYYY-MM</code> format as a string.</p>
+<pre><code class="hljs">A recommended approach for prefixing invoices is the *&quot;Language-Initials&quot;*
+format. For example, if there's a translator named *&quot;John Doe&quot;* translating
+into Spanish (ES), the prefix might look like ``'ES-JD-'`` and the invoices
+generated for this person will be consequently named like *'ES-JD-2016-06'*,
+*'ES-JD-2016-07'* and so on. If there is a need for these IDs to be globally
+unique, one needs to specify a unique prefix for each of the paid
+translators.
+</code></pre>
+<p><code>minimal_payment</code>
+Minimal payment threshold value to be reached for the payment to be
+initiated during the monthly pay cycle. If the summed up amount is lower
+than <code>minimal_payment</code>, the amount for the month will be carried over to
+the next month.</p>
+<pre><code class="hljs">The amount is in the currency set along the rate for the user in the
+reporting UI.
+</code></pre>
+<p><code>extra_add</code>
+Fixed amount to be added on top of the total accrued amounts. Use this e.g.
+to reimburse transaction fees.</p>
+<pre><code class="hljs">The amount is in the currency set along the rate for the user in the
+reporting UI.
+</code></pre>
+<p><code>subcontractors</code>
+A list of usernames which will be considered as subcontractors of the main
+user. This way, subcontractors' work is consolidated in a single invoice.</p>
+<p>When sending emails with <code>--send-emails</code>, the following keys are available
+as well:</p>
+<p><code>email</code> (required)
+E-mail address of the translator where the invoice will be sent to. It can
+contain multiple addresses separated by spaces.
+This is not read from the user profile to have a way to set it explicitly
+and avoid potential conflicts when people are using different addresses for
+different purposes.</p>
+<p><code>accounting_email</code> (required)
+E-mail address of the company's accountants. At this address they will
+receive the request to pay the invoice, along with a copy of it.
+It can contain multiple addresses separated by spaces.</p>
+<p><code>accounting_email_cc</code>
+E-mail address of the company's accountants which will be added in the copy
+of the request for payment.
+It can contain multiple addresses separated by spaces.</p>
+<p>Check a full example below.</p>
+<pre><code class="hljs css python">  ZING_INVOICES_RECIPIENTS = {
+      <span class="hljs-string">'johndoe'</span>: {
+          <span class="hljs-string">'name'</span>: <span class="hljs-string">'John Benjamin Doe'</span>,
+          <span class="hljs-string">'invoice_prefix'</span>: <span class="hljs-string">'JD-'</span>,
+          <span class="hljs-string">'paid_by'</span>: <span class="hljs-string">'ACME Corp.'</span>,
+          <span class="hljs-string">'wire_info'</span>: <span class="hljs-string">u"""
+              Name on Account: John Doe
+              Bank: TEST BANK
+              SWIFT: SWIFT number
+              Agency: Agency number
+              Current Account: Acc. number
+              CPF: C.P.F. number
+              """</span>,
+
+          <span class="hljs-string">'minimal_payment'</span>: <span class="hljs-number">50</span>,
+          <span class="hljs-string">'extra_add'</span>: <span class="hljs-number">30</span>,
+          <span class="hljs-string">'subcontractors'</span>: (
+              <span class="hljs-string">'&lt;username1&gt;'</span>, <span class="hljs-string">'&lt;username2&gt;'</span>,
+          ),
+
+          <span class="hljs-string">'email'</span>: <span class="hljs-string">'johndoe@example.com'</span>,
+          <span class="hljs-string">'accounting_email'</span>: <span class="hljs-string">'accountant@example.com'</span>,
+          <span class="hljs-string">'accounting_email_cc'</span>: <span class="hljs-string">'other.accountant@example.com'</span>,
+      },
+  }
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" name="pootle-score-coefficients"></a><a href="#pootle-score-coefficients" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_SCORE_COEFFICIENTS</code></h3>
+<p>Default:</p>
+<pre><code class="hljs css python">  {
+      <span class="hljs-string">'EDIT'</span>: <span class="hljs-number">5.0</span>/<span class="hljs-number">7</span>,
+      <span class="hljs-string">'REVIEW'</span>: <span class="hljs-number">2.0</span>/<span class="hljs-number">7</span>,
+      <span class="hljs-string">'SUGGEST'</span>: <span class="hljs-number">0.2</span>,
+      <span class="hljs-string">'ANALYZE'</span>: <span class="hljs-number">0.1</span>,
+  }
+</code></pre>
+<p>Parameters:</p>
+<ul>
+<li><code>EDIT</code> - coefficient to calculate an user score change for
+edit actions.</li>
+<li><code>REVIEW</code> - coefficient to calculate an user score change for
+review actions.</li>
+<li><code>SUGGEST</code> - coefficient to calculate an user score change for
+new suggestions.</li>
+<li><code>ANALYZE</code> - coefficient to calculate an user score change for
+rejecting suggestions and penalty for the rejected suggestion.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" name="pootle-sync-file-mode"></a><a href="#pootle-sync-file-mode" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_SYNC_FILE_MODE</code></h3>
+<p>Default: <code>0644</code></p>
+<p>On POSIX systems, files synchronized to disk will be assigned this permission.
+Use <code>0644</code> for publically-readable files or <code>0600</code> if you want only the Pootle
+user to be able to read them.</p>
+<h3><a class="anchor" aria-hidden="true" name="pootle-tm-server"></a><a href="#pootle-tm-server" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_TM_SERVER</code></h3>
+<p>Default: <code>{}</code> (empty dict)</p>
+<p>Example configuration for local/external TM server:</p>
+<pre><code class="hljs css python">  {
+      <span class="hljs-string">'local'</span>: {
+          <span class="hljs-string">'ENGINE'</span>: <span class="hljs-string">'pootle.core.search.backends.ElasticSearchBackend'</span>,
+          <span class="hljs-string">'HOST'</span>: <span class="hljs-string">'localhost'</span>,
+          <span class="hljs-string">'PORT'</span>: <span class="hljs-number">9200</span>,
+          <span class="hljs-string">'INDEX_NAME'</span>: <span class="hljs-string">'translations'</span>,
+          <span class="hljs-string">'WEIGHT'</span>: <span class="hljs-number">1</span>,
+      },
+      <span class="hljs-string">'external'</span>: {
+          <span class="hljs-string">'ENGINE'</span>: <span class="hljs-string">'pootle.core.search.backends.ElasticSearchBackend'</span>,
+          <span class="hljs-string">'HOST'</span>: <span class="hljs-string">'localhost'</span>,
+          <span class="hljs-string">'PORT'</span>: <span class="hljs-number">9200</span>,
+          <span class="hljs-string">'INDEX_NAME'</span>: <span class="hljs-string">'external-translations'</span>,
+          <span class="hljs-string">'WEIGHT'</span>: <span class="hljs-number">0.9</span>,
+      },
+  }
+</code></pre>
+<p>This is configured to access a standard Elasticsearch setup.  Change the
+settings for any non-standard setup.  Change <code>HOST</code> and <code>PORT</code> settings
+as required.</p>
+<p>The default <code>local</code> TM is automatically updated every time a new
+translation is submitted. The other TMs are not automatically updated so they
+can be trusted to provide selected high quality translations.</p>
+<p>Every TM server must have its own unique <code>INDEX_NAME</code>.</p>
+<p><code>WEIGHT</code> provides a weighting factor to alter the final score for TM
+results from this TM server. Valid values are between <code>0.0</code> and <code>1.0</code>,
+both included. Defaults to <code>1.0</code> if not provided.</p>
+<p><code>MIN_SIMILARITY</code> serves as a threshold value to filter out results that are
+potentially too far from the source text. The Levenshtein distance is
+considered when measuring how similar the text is from the source text, and
+this represents a real value in the (0..1) range, 1 being 100% similarity.
+The default value (0.7) should work fine in most cases, although your mileage
+might vary.</p>
+<h3><a class="anchor" aria-hidden="true" name="pootle-mt-backends"></a><a href="#pootle-mt-backends" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_MT_BACKENDS</code></h3>
+<p>Default: <code>[]</code> (empty list)</p>
+<p>This setting enables translation suggestions through several online services.</p>
+<p>The elements for the list are two-element tuples containing the name of the
+service and an optional API key.</p>
+<p>Available options are:</p>
+<p><code>GOOGLE_TRANSLATE</code>: Google Translate service.
+For this service you need to obtain an API key. Note that Google Translate
+API is a <code>paid service &lt;https://cloud.google.com/translate/v2/pricing&gt;</code>_.</p>
+<p><code>YANDEX_TRANSLATE</code>: Yandex.Translate service.
+For this service you need to <code>obtain a Yandex API key &lt;https://tech.yandex.com/keys/get/?service=trnsl&gt;</code>_.</p>
+<h3><a class="anchor" aria-hidden="true" name="parse-pool-cull-frequency"></a><a href="#parse-pool-cull-frequency" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>PARSE_POOL_CULL_FREQUENCY</code></h3>
+<p>Default: <em>4</em></p>
+<p>When the pool fills up, <code>1/PARSE_POOL_CULL_FREQUENCY</code> number of files will be
+removed from the pool.</p>
+<h3><a class="anchor" aria-hidden="true" name="parse-pool-size"></a><a href="#parse-pool-size" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>PARSE_POOL_SIZE</code></h3>
+<p>Default: <em>40</em></p>
+<p>To avoid rereading and reparsing translation files from disk on
+every request, Pootle keeps a pool of already parsed files in memory.</p>
+<p>Larger pools will offer better performance, but higher memory usage
+(per server process).</p>
+<h3><a class="anchor" aria-hidden="true" name="pootle-translation-directory"></a><a href="#pootle-translation-directory" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_TRANSLATION_DIRECTORY</code></h3>
+<p>Default: <code>working_path('translations')</code></p>
+<p>The directory where projects hosted on Pootle store their translation files.
+<code>sync_stores</code> will write to this directory and <code>update_stores</code> will read from
+this directory.</p>
+<h3><a class="anchor" aria-hidden="true" name="pootle-quality-checker"></a><a href="#pootle-quality-checker" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_QUALITY_CHECKER</code></h3>
+<p>Default: <code>pootle_misc.checks.ENChecker</code></p>
+<p>The import path to a class that provides alternate quality checks to
+Pootle.  If it is unset then the Translate Toolkit checking functions are
+used and you can make adjustments in the project's admin page.  If set
+then the quality checker function is used for all projects.</p>
+<blockquote>
+<p>If set, only the checker function defined here is used instead of the
+Translate Toolkit counterparts. Both cannot be selectively applied.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" name="pootle-wordcount-func"></a><a href="#pootle-wordcount-func" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>POOTLE_WORDCOUNT_FUNC</code></h3>
+<p>Default: <code>translate.storage.statsdb.wordcount</code></p>
+<p>The import path to a function that provides wordcounts for Pootle.</p>
+<p>Current options:</p>
+<ul>
+<li>Translate Toolkit (default) - translate.storage.statsdb.wordcount</li>
+<li>Pootle - pootle.core.utils.wordcount.wordcount</li>
+</ul>
+<p>Adding a custom function allows you to alter how words are counted.</p>
+<blockquote>
+<p>Changing this function requires that you run <code>refresh_stats --calculate-wordcount</code> to recalculate the associated wordcounts.</p>
+</blockquote>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="project-setup.html">← Project Setup</a><a class="docs-next button" href="commands.html">Commands →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 Zing Contributors.</section></footer></div></body></html>
