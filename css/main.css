@@ -1847,3 +1847,12 @@ footer.nav-footer {
 .nav-footer .copyright {
   color: #ccc;
 }
+
+.titleLogo {
+  margin-bottom: 0.7em;
+  width: 25%;
+}
+
+.navPusher {
+  height: calc(100% - 50px);
+}

@@ -1,0 +1,99 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Translation Editor · Zing</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Translation Editor · Zing"/><meta property="og:type" content="website"/><meta property="og:url" content="https://evernote.github.io/zing//zing/index.html"/><meta property="og:description" content="## Translation Memory"/><link rel="shortcut icon" href="/zing/undefined"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="/zing/css/main.css"/></head><body class="sideNavVisible"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/zing/"><img class="logo" src="/zing/img/logo.svg"/><h2 class="headerTitle">Zing</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li><a href="/zing/docs/introduction.html" target="_self">Docs</a></li><li><a href="/zing/en/faq.html" target="_self">FAQ</a></li><li><a href="https://github.com/julen/zing/" target="_blank">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Features</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Get Started</h3><ul><li class="navListItem"><a class="navItem" href="/zing/docs/introduction.html">Introduction</a></li><li class="navListItem"><a class="navItem" href="/zing/docs/installation.html">Installation</a></li><li class="navListItem"><a class="navItem" href="/zing/docs/initial-setup.html">Initial Setup</a></li></ul></div><div class="navGroup navGroupActive"><h3>Workflow</h3><ul><li class="navListItem"><a class="navItem" href="/zing/docs/project-setup.html">Project Setup</a></li></ul></div><div class="navGroup navGroupActive"><h3>Features</h3><ul><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/zing/docs/editor.html">Translation Editor</a></li><li class="navListItem"><a class="navItem" href="/zing/docs/invoices.html">Invoice Generation</a></li></ul></div><div class="navGroup navGroupActive"><h3>Reference</h3><ul><li class="navListItem"><a class="navItem" href="/zing/docs/settings.html">Settings</a></li><li class="navListItem"><a class="navItem" href="/zing/docs/commands.html">Commands</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/julen/zing/edit/master/docs/feat-editor.md" target="_blank">Edit</a><h1>Translation Editor</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" name="translation-memory"></a><a href="#translation-memory" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Translation Memory</h2>
+<p>Zing can aid translators by suggesting texts that have previously been
+translated.</p>
+<h2><a class="anchor" aria-hidden="true" name="configuring"></a><a href="#configuring" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuring</h2>
+<p>Translation Memory will work out of the box with a default Zing installation.
+There are two methods of getting Translation Memory.</p>
+<ol>
+<li>Elasticsearch - for local Translation Memory</li>
+<li>Elasticsearch - for external Translation Memory</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" name="elasticsearch-based-tms"></a><a href="#elasticsearch-based-tms" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Elasticsearch-based TMs</h3>
+<p>Pootle can also retrieve TM matches stored on Elasticsearch-based TM servers.
+These TM servers require
+<code>Elasticsearch &lt;https://www.elastic.co/products/elasticsearch&gt;</code>_ to be
+installed and running.</p>
+<p>.. note:: Elasticsearch depends on Java. Note that some systems may ship with
+OpenJDK, however <code>elasticsearch recommends using Oracle JDK &lt;https://www.elastic.co/guide/en/elasticsearch/reference/1.6/setup-service.html#_installing_the_oracle_jdk&gt;</code>_.</p>
+<p>Pootle supports two types of Elasticsearch-based TMs:</p>
+<ul>
+<li><p><strong>Local TM</strong>: (just one, named <code>local</code>) is populated using translations
+stored in Pootle database and every new translation gets automatically
+imported to it.</p></li>
+<li><p><strong>External TMs</strong>: (several) are populated from translation files specifically
+provided by the server admins, and are not automatically updated.</p></li>
+</ul>
+<p>Both local and external TM settings can be adjusted in
+:setting:<code>POOTLE_TM_SERVER</code>. A configuration example for local and external TM
+can be found in the default :file:<code>~/.pootle/pootle.conf</code>, and can be enabled by
+uncommenting the example.</p>
+<p>Please see the :setting:<code>POOTLE_TM_SERVER-WEIGHT</code> for a full example of the
+configuration necessary to set up local/external TM.</p>
+<p>.. _translation_memory#local_translation_memory:</p>
+<p>Elasticsearch-based local TM
+++++++++++++++++++++++++++++</p>
+<p>.. versionadded:: 2.7</p>
+<p>To use it, the <code>local</code> TM must be enabled on :setting:<code>POOTLE_TM_SERVER</code> and
+will need to be populated using the :djadmin:<code>update_tmserver</code> command:</p>
+<p>.. code-block:: console</p>
+<p>(env) $ pootle update_tmserver</p>
+<p>Once populated Pootle will keep Local TM up-to-date.</p>
+<p>.. _translation_memory#external_translation_memories:</p>
+<p>Elasticsearch-based external TMs
+++++++++++++++++++++++++++++++++</p>
+<p>.. versionadded:: 2.7.3</p>
+<p>In order to use them they must be enabled on :setting:<code>POOTLE_TM_SERVER</code> and
+you will need to populate them using the :djadmin:<code>update_tmserver</code> command
+specifying the TM to use with :option:<code>--tm &lt;update_tmserver --tm&gt;</code> and the
+display name with :option:<code>--display-name &lt;update_tmserver --display-name&gt;</code>:</p>
+<p>.. code-block:: console</p>
+<p>(env) $ pootle update_tmserver --tm=external --display-name=Pidgin af.po gl.tmx</p>
+<p>A display name is a label used to group translations within a TM. A given TM
+can host translations for several labels. Just specify them with
+:option:<code>--display-name &lt;update_tmserver --display-name&gt;</code>:</p>
+<p>.. code-block:: console</p>
+<p>(env) $ pootle update_tmserver --tm=external --display-name=GNOME pt.tmx eu.po xh.po</p>
+<p>It is possible to have several Elasticsearch-based external TM servers working
+at once, along with the Elasticsearch-based local TM server. In order to do so
+just add new entries to :setting:<code>POOTLE_TM_SERVER</code>:</p>
+<p>.. code-block:: python</p>
+<pre><code class="hljs">POOTLE_TM_SERVER = {
+
+    ...
+
+    'libreoffice': {
+        'ENGINE': 'pootle.core.search.backends.ElasticSearchBackend',
+        'HOST': 'localhost',
+        'PORT': 9200,
+        'INDEX_NAME': 'whatever',
+        'WEIGHT': 0.9,
+        'MIN_SCORE': 'AUTO',
+    },
+}
+</code></pre>
+<p>Make sure :setting:<code>INDEX_NAME &lt;POOTLE_TM_SERVER-INDEX_NAME&gt;</code> is unique. You
+might also want to tweak :setting:<code>WEIGHT &lt;POOTLE_TM_SERVER-WEIGHT&gt;</code> to change
+the score of the TM results in relation to other TM servers (valid values are
+between <code>0.0</code> and <code>1.0</code>).</p>
+<p>To use these additional external TMs you will need to populate them using the
+:djadmin:<code>update_tmserver</code> command specifying the TM server with :option:<code>--tm &lt;update_tmserver --tm&gt;</code>:</p>
+<p>.. code-block:: console</p>
+<p>(env) $ pootle update_tmserver --tm=libreoffice --display-name=LibreOffice af.po gl.tmx</p>
+<p>Check :djadmin:<code>update_tmserver</code> for more options.</p>
+<p>Note that Pootle will not push new translations to these TM servers unless you
+explicitly use the :djadmin:<code>update_tmserver</code> command, giving you full control
+of which translations make into them.</p>
+<h2><a class="anchor" aria-hidden="true" name="machine-translation"></a><a href="#machine-translation" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Machine Translation</h2>
+<p>Zing has the ability to use online Machine Translation (MT) Services to give
+suggestions to translators.</p>
+<h3><a class="anchor" aria-hidden="true" name="configuring"></a><a href="#configuring" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuring</h3>
+<p>To enable a certain Machine Translation Service, edit your configuration file
+and add the desired service within the
+<a href="/zing/docs/settings.html#pootle-mt-backends"><code>POOTLE_MT_BACKENDS</code></a>.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="project-setup.html">← Project Setup</a><a class="docs-next button" href="invoices.html">Invoices →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2018 Zing Contributors.</section></footer></div></body></html>
