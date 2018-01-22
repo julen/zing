@@ -5,6 +5,7 @@ env:
   - TOXENV=py27-django111-mysql PYTHONPATH=$HOME/virtualenv/python2.7.14/lib/python2.7/site-packages  TOX_TESTENV_PASSENV="PYTHONPATH"
   - TOXENV=py27-django111-postgres PYTHONPATH=$HOME/virtualenv/python2.7.14/lib/python2.7/site-packages  TOX_TESTENV_PASSENV="PYTHONPATH"
   # Meta
+  - TOXENV=lint PYTHONPATH=$HOME/virtualenv/python2.7.14/lib/python2.7/site-packages TOX_TESTENV_PASSENV="PYTHONPATH"
   - TOXENV=project PYTHONPATH=$HOME/virtualenv/python2.7.14/lib/python2.7/site-packages  TOX_TESTENV_PASSENV="PYTHONPATH"
 cache:
   directories:
