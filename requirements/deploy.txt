@@ -1,11 +1,6 @@
-# Pootle deployment
+# Zing deployment
 
 -r base.txt
-
-# Database
-mysqlclient>=1.3.3
-# Uncomment for PostgreSQL
-# psycopg2>=2.4.5
 
 # Logging
 raven==6.5.0
